@@ -1,0 +1,126 @@
+.top-links a {
+	color: #DF7401;
+	text-decoration: none;
+	text-transform: capitalize;
+	display: inline;
+	padding-right: 15px;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+.top-links {
+	position: absolute;
+	text-align: right;
+	top: 40px; 
+   	left: -20px; 
+   	width: 100%; 
+}
+
+.top-links a:hover {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.top-links a:visited {
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.main-background {
+	width: 100%;
+}
+
+.img-back { 
+   position: relative; 
+   width: 100%; 
+}
+
+h1 { 
+   position: absolute; 
+   top: 160px; 
+   left: 335px; 
+   width: 100%; 
+   text-align: left;
+}
+
+h1 span {
+	color: #DF7401; 
+   	font: bold 45px Cursive, Sans-Serif; 
+   	letter-spacing: -1px;  
+   	padding: 0px; 
+}
+
+.name-header {
+	display: block;
+}
+
+.social-sites a {
+	color: #DF7401;
+	font-family: sans-serif;
+	text-decoration: none;
+	text-transform: capitalize;
+	padding-right: 15px;
+}
+
+.social-sites {
+	text-align: center;
+	position: absolute; 
+   	top: 330px; 
+   	left: 0; 
+   	width: 100%; 
+}
+
+.social-sites a:hover {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.social-sites a:visited {
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+
+}
+
+.br {
+	border: 1px solid #DF7401;
+	border-width: 100%;
+}
+
+.glance {
+	color: #DF7401;
+	font-size: 45px;
+	font-family: 'Arvo', 'Noto-Serif', sans-serif;
+	text-align: center;
+}
+
+.glance-life {
+	display: block;
+	right: 10px;
+}
+
+.learn {
+	color: #DF7401;
+	text-decoration: none;
+	text-transform: capitalize;
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+a:hover {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+a:visited {
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
