@@ -159,6 +159,8 @@ footer {
 
 #one, #two, #three, #four, #five, #six, #seven {
 	padding: 0em 3em 0em 0em;
+	height: 100px;
+	width: 100px;
 }
 
 #project {
