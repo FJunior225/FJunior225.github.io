@@ -1,0 +1,59 @@
+.name-header a {
+	color: #DF7401;
+}
+
+.top-links a:hover {
+	color: #DF7401;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.top-links a:visited {
+	color: #DF7401;
+	font-style: italic;
+	text-decoration: none;
+}
+.first-post {
+	color: #DF7401;
+	position: absolute; 
+   	top: 240px; 
+   	left: 290px; 
+   	width: 100%; 
+   	text-align: left;
+   	font-family: Verdana;
+   	font-size: 20px;
+}
+.snippet {
+	color: #DF7401;
+	position: absolute;
+	top: 280px;
+	width: 100%;
+	text-align: left;
+	left: 290px;
+	font-family: Verdana;
+   	font-size: 20px;
+}
+
+p span {
+	color: #DF7401; 
+   	font: 20px Verdana; 
+   	letter-spacing: -1px;  
+   	padding: 0px; 
+}
+
+h4 a { 
+	color: #DF7401;
+	text-decoration: underline;
+	font-family: cursive;
+}
+
+h4 a:hover {
+	color: #DF7401;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+h4 a:visited {
+	color: #DF7401;
+	font-style: italic;
+	text-decoration: none;
+}
