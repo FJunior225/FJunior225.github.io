@@ -140,6 +140,8 @@ footer {
 
 .footer {
 	padding: 0px 5px 0px 5px;
+	height: 20px;
+	width: 20px;
 }
 
 .cursive-heading {
@@ -149,7 +151,7 @@ footer {
 	text-align: center;
 }
 
-#blog, #blog2 {
+#blog, #blog2, #blog3 {
 	color: #DF7401;
 	font-family: Verdana;
 	font-size: 20px;
