@@ -151,6 +151,12 @@ footer {
 	text-align: center;
 }
 
+#project {
+	display: block;
+	padding-bottom: 1em;
+	/*margin: auto;*/
+}
+ 
 #blog, #blog2, #blog3 {
 	color: #DF7401;
 	font-family: Verdana;
@@ -161,12 +167,6 @@ footer {
 	padding: 0em 3em 0em 0em;
 	height: 100px;
 	width: 100px;
-}
-
-#project {
-	display: block;
-	padding-bottom: 1em;
-	/*margin: auto;*/
 }
 
 section {
