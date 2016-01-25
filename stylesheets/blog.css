@@ -71,3 +71,15 @@ ul {
 	color: #DF7401
 	text-decoration: none;
 }
+ul a:hover {
+	color: blue;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+ul a:visited {
+	color: blue;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+}
