@@ -103,7 +103,7 @@ h1 span {
 	display: block;
 	/*margin: 0em 5em 0em 5em;*/
 	position: relative;
-	left: 10.5%;
+	right: 15%;
 }
 
 .learn {
@@ -116,13 +116,13 @@ h1 span {
 }
 
 a:hover {
-	color: white;
+	color: blue;
 	text-decoration: none;
 	text-transform: uppercase;
 }
 
 a:visited {
-	color: white;
+	color: blue;
 	font-weight: bold;
 	text-transform: uppercase;
 	text-decoration: none;

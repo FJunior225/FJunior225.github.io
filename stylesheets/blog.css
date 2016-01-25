@@ -67,3 +67,7 @@ h4 a:visited {
 	font-family: sans-serif;
 	font-size: 18px;
 }
+ul {
+	color: #DF7401
+	text-decoration: none;
+}
