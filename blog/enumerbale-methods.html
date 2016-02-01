@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Securing Your Code</title>
+		<title>Cycle Enumerable Method</title>
 		<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
 		<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
 	</head>
@@ -10,7 +10,6 @@
 	<header class="img-back">
       	<nav class="top-links">
       		<a href="http://fjunior225.github.io/index">Home</a>
-	      	<a href="#">About Me</a>
 			<a href="#">Portfolio</a>
 			<a href="#">Resume</a>
 			<a href="http://fjunior225.github.io/blog-index">Writing</a>
@@ -19,36 +18,76 @@
 	
 	<article id="body-content">
 		<h1>Journey Through Dev Bootcamp</h1>
-		<h2>How to Secure Your Code</h2>
-		<h3>FJ Collins Jr. - January 24th, 2016</h3>
-		<img id="battle-blog" src="../imgs/digital-security.jpg" height="120" width="260">
+		<h2>How to Use Enumerable#Cycle</h2>
+		<h3>FJ Collins Jr. - January 31st, 2016</h3>
+		<img src="../imgs/enumerating_enumerable.jpg" height="100" width="300">		
 		<p>
-			Being new to not only the Tech Industry, but to the Programming Industry as well, there are a lot of things I do not know. One for which, is security. More specifically how developers follow best practices when it comes to securing their programs.
+			Although Enumerables may seem to be confusing or intimidating, there are actually not so tough. If you understand how loops, arrays and hashes operate, then Enumerables are just extra tools that can make huge differences in less lines of code. One method to work with Enumerables is #cycle. It is very simple to understand how this method works - just take a look:
 		</p>
-		<h3>Where does insecurities come from?</h3>
+		<p>
+		<pre><code>
+		days_of_week = [Monday, Tuesday, Wednesday, Thursday]
+		array.cycle { |day| print day }
+		=>Monday, Tuesday, Wednesday, Thursday, Monday, Tuesday, Wednesday, Thursday, #forever
+		</code></pre>
+			As you can see from the code above, the array will repeat itself over and over again as an infinite loop. A cycle method will select each element of the enumerable and repeat each element n times or forever if n is not defined or given. As programmers, we usually never want to have an infinite loop, therefore, our code would look more like this:
+
+		<pre><code>
+		array = [Monday, Tuesday, Wednesday, Thursday]
+		array.cycle(2) { |day| print day}
+		=> Monday, Tuesday, Wednesday, Thursday, Monday, Tuesday, Wednesday, Thursday.
+		</code></pre>
+			Obviously, this is a very basic example of how to use the cycle method within an array. The real power can come when combining this method with other enumerable functions like <code>.next</code> and <code>.rewind</code>.
+		</p>
+		<h3><code>next</code> & <code>rewind</code></h3>
 	    <p>
-	    	Plain and simple, bugs. Why do programs have bugs? We're all human and make mistakes, whether it be from ignorance, haste, carelessness or any other reason. No one is perfect, therefore, no code is necessarily perfect. These bugs can lead to unintentional flaws that allow someone to compromise your system and take advantage of those human errors. So what can we do to prevent this from happening?
+	    	We can use <code>next</code> and <code>rewind</code> to give us the next item in a repeating sequence.
+	   	<pre><code>
+	    	days = days_of_the_week.cycle
+	    	days.next
+	    	=>Monday
+	    	days.next
+	    	=>Tuesday
+	    	days.next
+	    	=>Wednesday
+	    </code></pre>
+	    <pre><code>
+	    	days.rewind
+	   	=>Monday
+	    </code></pre>
+	    	Here we see the rewind method resetting the enumerable back to the first item in the sequence.
 	    </p>
-	    <h3>Best-Practices for coding</h3>
+	    <h3>A Step Further</h3>
 	    <p>
-		  	<ol>
-		  		<li>Design your program before you code: It's better to have some sort of structure before you begin your code, so that changes made will affect little code. More changes could lead to more mistakes made, nonetheless, you should think about such things like the environment in which the program will run; input and output behavior; any files to be used; arguments recognized; or any other aspects of behavior. Realizing these behaviors can recognize future errors that may arise and a way to fix them.</li>
-		  		<li>Make critical portion of your program as simple as possible: This will help to ensure that any debugging will not hinder your program functions. Simple coding will also lead to less errors and in turn, less bugs.</li>
-		  		<li>Never trust just any input: This is important because untrusted sources can lead to damaging code. Make sure you're feedback is from people you trust or websites you trust.</li>
-		  		<li>Resist the temptation to add a feature for the sole purpose that you can: This stems from keep your code simple - only add a feature when it is identified that it is needed.</li>
-		  		<li>Lastly, keep it simple again!</li>
-		  	</ol>
-	    </p>  
+		  	Let's say we have another array called <code>roommates</code> and we set it equal to everyone who lives in an apartment. 
+		<pre><code>
+		roommates_living_with = [John, Joe, Jay, James]
+		roommates = roommates_living_with.cycle
+		</code></pre>
+		 	Let's also call the cycle method to the array and see how we can use this with <code>days_of_week</code> to create a schedule of who is responsible for cooking each day. 
+		<pre><code>
+		10.times do
+			day = days.next
+	 		roommate = roommates.next
+	 		puts "On #{day}, #{roommate} will be responsible for cooking!"
+	 	end
+	 	=>On Monday, John will be responsible for cooking!
+	 	On Monday, Joe will be responsible for cooking!
+		On Tuesday, Jay will be responsible for cooking!
+	 	On Wednesday, James will be responsible for cooking!
+	 	On Thursday, John will be responsible for cooking!
+	 	On Friday, Joe will be responsible for cooking!
+	 	On Saturday, Jay will be responsible for cooking!
+	 	On Sunday, James will be responsible for cooking!
+	 	On Monday, John will be responsible for cooking!
+	 	On Tuesday, Joe will be responsible for cooking!
+		</code></pre>
+		</p>  
 	    <p>
-	    	I note only wrote this post for others to gain knowledge of best-practices when it comes to securely code, but also for myself. It was an interesting topic to research and it reminded me that simple code is secure code. DBC is really doing a good job having us research concepts we enjoy and don't understand fully. I'm excited to see what comes up next!
+	    	You can see that cycle, although at first glance, looks like a irrelevant method that may lead to an infinite loop. However, it can be a very powerful tool used in combination with the <code>next</code> and <code>rewind</code> methods. As something so simple as days of the week and your roommates, you can easily create a schedule, not only for cooking, but for other chores as well. 
 	    </p>
-	    <img src="../imgs/security.jpg" height="200" width="200">
-	    <h3>Additional Resources</h3>
-	    <p>
-	    	<a href="https://niccs.us-cert.gov/">The National Initiative for Cybersecurity Careers and Studies</a> has a <a href="https://niccs.us-cert.gov/education/cyber-games-and-programming">hands-on learning</a> page for those who would like to familiarize themselves with more information about security and its relation to programming. I thought they did an great job to use games as a method for teaching. Check it out!
-	    </p>
+	    <img src="../imgs/enumerating_enumerable.jpg" height="100" width="300">
 		 
-	    
 	    <p>
 	    	I hope you all enjoyed this post as it is one of many on my journey to become a software engineer. Please comment and ask any questions that arise - I will gladly respond. Thank you!
 	    </p> 
@@ -63,8 +102,6 @@
 
 <footer>
 	<p>Connect with me:</p>
-		<a class="footer" href="http://www.facebook.com/fj.collins.5"><img src="../imgs/footer_facebookButton.png" alt= "FaceBook logo" width="20" height="20"></a>
-		<a class="footer" href="http://www.twitter.com/fj_junior"><img src="../imgs/twitter-logo.png" alt="Twitter Logo" width="20" height="20"></a>
 		<a class="footer" href="https://github.com/FJunior225"><img src="../imgs/Octocat.png" alt="GitHub Octocat" width="20" height="20"></a>
 		<a class="footer" href="http://www.linkedin.com/profile/view?id=AAIAAAL5ApoBloZ_nNmCpK1EoIrAJvxYkEEwGMA&trk=nav_responsive_tab_profile"><img src="../imgs/linkedin-logo.jpg" alt="LinkedIn Logo" width="20" height="20"></a>
 		<a class="footer" href="mailto:fcollins225@gmail.com"><img src="../imgs/email.png" alt="Envelope Logo" width="20" height="20"></a>
