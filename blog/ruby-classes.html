@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cycle Enumerable Method</title>
+		<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+		<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+	</head>
+
+<body>
+	<header class="img-back">
+      	<nav class="top-links">
+      		<a href="http://fjunior225.github.io/index">Home</a>
+			<a href="#">Portfolio</a>
+			<a href="#">Resume</a>
+			<a href="http://fjunior225.github.io/blog-index">Writing</a>
+		</nav>
+	</header>
+	
+	<article id="body-content">
+		<h1>Journey Through Dev Bootcamp</h1>
+		<h2>Who is a Class & What Does it do?(Arnold Voice)</h2>
+		<h3>FJ Collins Jr. - February 7, 2016</h3>
+		<img src="../imgs/classes-and-superclasses.png" height="200" width="300">		
+		<p>
+		So you have begun your own journey through Ruby and understand how almost everything in Ruby is an object - arrays, hashes, integers, strings etc. Each one of these elements have a separate class to associate them with. For example, an easy way to find out which object belongs to which class is to call class on that object...
+		<pre><code>
+			puts 1.class
+			puts "".class
+			puts [].class
+
+			=>Fixnum
+			=>String
+			=>Array	
+		</code>
+		</pre>
+		You can also ask whether a specific object is part of a particular class...
+		<pre><code>
+			puts 1.is_a?(Integer)
+			puts 1.is_a?(Array)
+
+			=> true
+			=>false
+		</code></pre>
+		This is all well and good, but how can we manipulate classes to see how a real-life object works? What if we have an object like <code>computer</code> and we want to see its attributes, responsibilities, actions etc. We can create our own class called <code>Computer</code> and create different methods of objects to see its actions, color, size etc. 
+		</p>
+		<h3>Creating a Class for <code>Computer</code></h3>
+	    <p>
+	    Like methods, classes are defined with opening word <code>class</code> and is completed with an <code>end</code> statement.
+	    <pre><code>
+	    	class Computer
+	    	end
+	    </code></pre>
+	    Next, we want to indicate which variables are going to be accessed throughout the class. A best-practice use would be to <code>Initialize</code> the variables for computers.
+	    <pre><code>
+	    	class Computer
+	    		def Initialize(brand, model)
+	    			@brand = brand
+	    			@model = model_number
+	    			@os = operating_system
+	    			@users = users
+	    		end
+	    	end
+	    </code></pre>
+	    Here we have a couple of variables defined and you might have noticed the @ before each variable. These are known as instance variables and their scope are confined to whatever object self refers to. Therefore, although it is a variable, <code>@os</code> can be referenced throughout the class <code>Computer</code>.
+	    </p>
+	    <p>
+	    This concept of instantiation sounds intimidating, however it's really a not as bas as it seems. This just means that when Ruby uses the <code>Computer</code> class to create a new one, that computer should come pre-loaded with certain information in the form of instance variables.
+	    </p>
+	    Next we create some methods of the computer - we might want to see which user is currently on the computer, what documents are opened, what programs are being used etc...
+	    <pre><code>
+	    	class Computer
+	    		def Initialize(brand, model, os, user)
+	    			@brand = brand
+	    			@model = model_number
+	    			@os = operating_system
+	    			@user = user
+	    		end
+
+	    		def current_user
+	    			@user
+	    		end
+	    	end
+	    </code></pre>
+	    As simple as #current_user is, it will display which user is currently using the computer. Now a pretty neat trick to use instead of just displaying the current user is to use the <code>attr_reader</code>, <code>attr_writer</code> and <code>attr_accessor</code> tools. 
+	    	<ul>
+	    		<li><code>attr_reader</code> is a reader which means that it just returns a value or state outside of the class, but does not change it. </li>
+	    		<li><code>attr_writer</code> is a writer which means that you can change the value of the variable outside of the class, but it is not readable.</li>
+	    		<li><code>attr_accessor</code> is both a reader and a writer. It can be used to return and change the value of the variable.</li>
+	    	</ul>
+	    Therefore, our new code would look like this...
+	    <pre><code>
+	    	class Computer
+	    		attr_reader :user
+	    		def Initialize(brand, model, os, user)
+	    			@brand = brand
+	    			@model = model_number
+	    			@os = operating_system
+	    			@user = user
+	    		end
+
+	    		<!-- def current_user
+	    			@user
+	    		end -->
+	    	end
+	    </code></pre>
+	    </p>
+	    <p>
+	    	I hope this gives you a general understand of <code>Classes</code> and how they work with attributes and methods. Please come back soon!
+	    </p>
+	    <img src="../imgs/classes-and-superclasses.png" height="200" width="300">
+		 
+	    <p>
+	    	I hope you all enjoyed this post as it is one of many on my journey to become a software engineer. Please comment and ask any questions that arise - I will gladly respond. Thank you!
+	    </p> 
+	</article>	    
+	
+	<img src="../imgs/IMG_0816.jpg" height="80" width="80">
+	<p>Growing up, I wasn't one of those kids who knew exactly what he wanted to be (i.e. Astronaut, Police Office, Cowboy etc.), instead I focused on what I love doing which was playing football. It was until I built my first computer from scratch that I knew being in the IT Industry was where I belong. It was the ability to teach myself how to use & create technology that formed my path in life. Hence, I earned a Masters Degree from DeVry in MIS and currently work in the IT field for a Network Consultant.</p>
+	<a href="#">Likes Button</a>
+	<a href="#">Share button</a>
+	<h4>Comments (# of current comments)</h4>
+	<p>add comments section here!</p>
+
+<footer>
+	<p>Connect with me:</p>
+		<a class="footer" href="https://github.com/FJunior225"><img src="../imgs/Octocat.png" alt="GitHub Octocat" width="20" height="20"></a>
+		<a class="footer" href="http://www.linkedin.com/profile/view?id=AAIAAAL5ApoBloZ_nNmCpK1EoIrAJvxYkEEwGMA&trk=nav_responsive_tab_profile"><img src="../imgs/linkedin-logo.jpg" alt="LinkedIn Logo" width="20" height="20"></a>
+		<a class="footer" href="mailto:fcollins225@gmail.com"><img src="../imgs/email.png" alt="Envelope Logo" width="20" height="20"></a>
+	<p>
+    Copyright &copy; 2016 FJ Collins Jr. All Rights Reserved.
+    </p>
+</footer>
+	
+</body>
+</html>
