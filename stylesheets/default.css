@@ -33,11 +33,7 @@ a:hover {
 	color: aqua;
 	text-decoration: none;
 }
-a:visited {
-	color: white;
-	font-weight: bold;
-	text-decoration: none;
-}
+
 .social-sites {
 	text-align: center;
 	position: absolute; 
