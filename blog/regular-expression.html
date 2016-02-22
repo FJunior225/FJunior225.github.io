@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>What is RegEx?</title>
+		<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+		<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+	</head>
+
+<body>
+      	<nav class="top-links">
+      		<a href="../index.html">Home</a>
+			<a href="../projects/index.html">Portfolio</a>
+			<a href="#">Resume</a>
+			<a href="../blog-index.html">Writing</a>
+		</nav>
+	</header>
+	
+	<article id="body-content">
+		<h1>Journey Through Dev Bootcamp</h1>
+		<h2>What is RegEx?</h2>
+		<h3>FJ Collins Jr. - February 21st, 2016</h3>
+		<img src="../imgs/regular-express.png" height="300" width="300">
+		<p>Throughout the past 8 weeks, I have come to hear and see the words 'regular expressions,' but never knew exactly what they were or meant. As beginners, we were told to stay away for now and the complexity of regular expressions or RegEx (RegExp) would be define when we were on-site at DBC. In Ruby and JS, it seemed that RegEx provided powerful shortcuts for refactored code using symbols and special characters. Let's dig in a little deeper and try to unravel some of its mysteries to beginning software engineers.</p>
+		<h3>What is RegEx?</h3>
+	    <p>RegEx is an object within a language that describes a pattern of characters and its mostly used for patterns within strings or a "find-and-replace" method. Much like your Ctrl-F function when you're sifting through a web-page or a document looking for specific words. At first glance at a RegEx, you might not understand what or how it works - <code>\b[A-Z0-9._%+-]++@[A-Z0-9.-]+\.[A-Z]{2,6}\b</code> - but each character within that sequence has a purpose. Let's take a look: 
+	    <ul>
+	    	<li><code>\b</code> - This anchor is allowing us to assert position at a word boundary. Anchors do not match any characters. They match a position. <code>^</code> matches at the start of the string, and <code>$</code> matches at the end of the string. <code>\b</code> matches at a word boundary. A word boundary is a position between a character that can be matched by <code>\w</code> and a character that cannot be matched by <code>\w</code>. <code>\b</code> also matches at the start and/or end of the string if the first and/or last characters in the string are word characters. <code>\B</code> matches at every position where <code>\b</code> cannot match. </li>
+	    	<li><code>[A-Z0-9._%+-]</code> - This is telling the machine to match a single character out of the list: one of the characters "._%+-", or in the range between A and Z, or in the range between 0 and 9</li>
+	    	<ul>
+	    		<li><code>++</code>- Between one and unlimited times, as many times as possible, without giving back (possessive)</li>
+	    	</ul>
+	    	<li><code>@</code> - We want to match the character "@" literally</li>
+	    	<li><code>[A-Z0-9.-]</code> - We've seen this before, match a single character out of the list: one of the characters ".-", or in the range between A and Z, or in the range between 0 and 9 </li>
+	    	<ul>
+	    		<li><code>+</code> - Between one and unlimited times, as many times as possible, giving back as needed (greedy)</li>
+	    	</ul>
+	    	<li><code>\.</code> - We want to match the character "." literally (The backslash is needed since "." is a predefined character meaning something different)</li>
+	    	<li><code>[A-Z]</code> - Very similar to previous code, match a single character in the range between A and Z</li>
+	    	<ul>
+	    		<li><code>{2,6}</code> - Between 2 and 6 times, as many times as possible, giving back as needed (greedy)</li>
+	    	</ul>
+	    	<li><code>\b</code> - Close out the expression and assert position at a word boundary </li>
+	    </ul>
+	    This specific line of code allows a user to search for an email address - any email address, to be exact. A very similar regular expression can be used by a programmer to check if the user entered a properly formatted email address. So you can see how this can be helpful on a website for users entering email addresses to receive confirmations etc.</p>
+	    <p> Basically, a regular expression is a pattern describing a certain amount of text. That makes them ideally suited for searching, text processing and data validation. Searching with regular expressions enables you to get results with just one search instead of many searches. The benefit of using regular expressions to update data is that with a single RegEx pattern, you can dynamically update a variety of data.</p>  
+	    <h3>Special Characters</h3>
+	    <p>I mentioned before that a backslash was needed to search through and find all the "." because it was a special character. What does that mean?</p>
+	    <p>Twelve characters have special meanings in regular expressions: the backslash <code>\</code>, the caret <code>^</code>, the dollar sign <code>$</code>, the period or dot <code>.</code>, the vertical bar or pipe symbol <code>|</code>, the question mark <code>?</code>, the asterisk or star <code>*</code>, the plus sign <code>+</code>, the opening parenthesis <code>(</code>, the closing parenthesis <code>)</code>, the opening square bracket <code>[</code>, and the opening curly brace <code>{</code>. These special characters are often called "metacharacters".</p>
+	    <p>Therefore, since they have a different meaning to a program, if we need to reference them without their special meaning, we need a backslash in front of them. A <code>\</code> tells the machine that the next character is it's literal function. If you wanted to input a RegEx such as <code>3+3=0</code>, you would need to type it as <code>3\+3=0</code>.</p>
+	    <p>This is just a basic outline of what RegEx can do and how they operate. I look forward to understanding the true power behind RegEx and begin using them myself.</p>
+	    <img src="../imgs/regex.png" height="250" width="400">
+	    <h3>Additional Resources</h3>
+	    <p>
+		    <ul>
+		    	<li><a href="http://www.regular-expressions.info/"> Regular Expression</a></li>
+		    	<li><a href="https://en.wikipedia.org/wiki/Regular_expression"> Wiki-RegEx</a></li>
+		    	<li><a href="http://regexr.com/">Test Your RegEx</a></li>
+		    </ul>
+	    </p>
+		 
+	    
+	    <p>I hope you all enjoyed this post as it is one of many on my journey to become a software engineer. Please comment and ask any questions that arise - I will gladly respond. Thank you!</p> 
+	</article>	    
+	
+	<img src="../imgs/IMG_0816.jpg" height="80" width="80">
+	<p>Growing up, I wasn't one of those kids who knew exactly what he wanted to be (i.e. Astronaut, Police Office, Cowboy etc.), instead I focused on what I love doing which was playing football. It was until I built my first computer from scratch that I knew being in the IT Industry was where I belong. It was the ability to teach myself how to use & create technology that formed my path in life. Hence, I earned a Masters Degree from DeVry in MIS and currently work in the IT field for a Network Consultant.</p>
+	<a href="#">Likes Button</a>
+	<a href="#">Share button</a>
+	<h4>Comments (# of current comments)</h4>
+	<p>add comments section here!</p>
+
+<footer>
+	<p>Connect with me:</p>
+		<a class="footer" href="https://github.com/FJunior225"><img src="../imgs/Octocat.png" alt="GitHub Octocat" width="20" height="20"></a>
+		<a class="footer" href="http://www.linkedin.com/profile/view?id=AAIAAAL5ApoBloZ_nNmCpK1EoIrAJvxYkEEwGMA&trk=nav_responsive_tab_profile"><img src="../imgs/linkedin-logo.jpg" alt="LinkedIn Logo" width="20" height="20"></a>
+		<a class="footer" href="mailto:fcollins225@gmail.com"><img src="../imgs/email.png" alt="Envelope Logo" width="20" height="20"></a>
+	<p>
+    Copyright &copy; 2016 FJ Collins Jr. All Rights Reserved.
+    </p>
+</footer>
+	
+</body>
+</html>

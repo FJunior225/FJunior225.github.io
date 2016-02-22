@@ -3,13 +3,7 @@
 }
 
 .top-links a:hover {
-	color: #DF7401;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-.top-links a:visited {
-	color: #DF7401;
-	font-style: italic;
+	color: #58FAF4;
 	text-decoration: none;
 }
 .first-post {
@@ -47,14 +41,7 @@ h4 a {
 }
 
 h4 a:hover {
-	color: #DF7401;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-
-h4 a:visited {
-	color: #DF7401;
-	font-style: italic;
+	color: #58FAF4;
 	text-decoration: none;
 }
 
@@ -67,19 +54,11 @@ h4 a:visited {
 	font-family: sans-serif;
 	font-size: 18px;
 }
-ul {
-	color: #DF7401
+ul a{
+	color: #DF7401;
 	text-decoration: none;
 }
 ul a:hover {
-	color: blue;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-
-ul a:visited {
-	color: blue;
-	font-weight: bold;
-	text-transform: uppercase;
+	color: #58FAF4;
 	text-decoration: none;
 }
