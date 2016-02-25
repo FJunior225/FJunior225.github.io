@@ -33,7 +33,6 @@ a:hover {
 	color: aqua;
 	text-decoration: none;
 }
-
 .social-sites {
 	text-align: center;
 	position: absolute; 
@@ -47,7 +46,7 @@ a:hover {
 
 .main-background {
 	width: 100%;
-	height: 540px 
+	height: 540px; 
 }
 
 .img-back { 
@@ -84,7 +83,6 @@ a:hover {
 }
 
 .glance-life {
-	margin-left: 8%;
 	padding-bottom: 10px;
 	position: relative;
 }
@@ -95,15 +93,14 @@ a:hover {
 }
  
 #blog, #blog2, #blog3, #blog4 {
-	color: #DF7401;
 	font-family: Verdana;
 	font-size: 20px;
 }
-
-#one, #two, #three, #four, #five, #six, #seven {
+.pic {
 	padding: 0em 1.5em 0em 1.5em;
-	height: 100px;
-	width: 100px;
+	height: 150px;
+	width: 150px;
+	display: inline-block;
 }
 .column-1, .column-2 {
 	margin-bottom: 10px;
@@ -111,8 +108,6 @@ a:hover {
   	float: left;
   	width: 48%;
   	padding: 0px 10px 10px 10px;
-}
-.column-1 {
 }
 .column-2 {
   border-left: 2px solid orange;
