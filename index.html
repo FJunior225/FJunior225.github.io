@@ -1,71 +1,194 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="stylesheets/default.css">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+
 	<title>FJ Collins Jr.</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+
+	<!-- Bootstrap itself -->
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="assets/css/magister.css">
+
+	<!-- Fonts -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
 </head>
-<body>
-	<header>
-		<div class="img-back">
-			<img class="main-background" src="imgs/index-img.png" alt="Desktop">
-			<nav class="top-links">
-		      	<a href="#">About Me</a>
-				<a href="projects/index.html">Portfolio</a>
-				<a href="#">Resume</a>
-				<a href="blog-index.html">Writing</a>
-			</nav>
-			<h1><span class="name-header" id ="name-1">FJ Collins Jr. </span></h1>
-			<h1><span class="name-header" id="name-2">Web Developer</span></h1>
-			<nav class="social-sites">
-				<a href="https://github.com/FJunior225">GitHub</a>
-				<a href="https://www.linkedin.com/profile/view?id=AAIAAAL5ApoBloZ_nNmCpK1EoIrAJvxYkEEwGMA&trk=nav_responsive_tab_profile">LinkedIn</a>
-				<a href="mailto:fcollins225@gmail.com">Contact Me</a>
-			</nav>
+
+<!-- use "theme-invert" class on bright backgrounds, also try "text-shadows" class -->
+<body class="theme-invert">
+
+<nav class="mainmenu">
+	<div class="container">
+		<div class="dropdown">
+			<button type="button" class="navbar-toggle" data-toggle="dropdown"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			<!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+				<li><a href="#head" class="active">Hello</a></li>
+				<li><a href="#about">About me</a></li>
+				<li><a href="#themes">Portfolio</a></li>
+				<li><a href="#resume">Resume</a></li>
+				<li><a href="#contact">Get in touch</a></li>
+			</ul>
 		</div>
-	</header>
-	<div class="br"></div>
-		<section>
-			<h2 class="headers">Glance Into My Life</h2>
-			<p class="bio">
-			Growing up, I wasn't one of those kids who knew exactly what he wanted to be (i.e. Astronaut, Police Office, Cowboy etc.), instead I focused on what I love doing which was playing football. I played football most of my life and when I realized I could not play forever, I was stuck with what to do with my career. It wasn't until I built my first computer from scratch that I knew working with computers was where I belong. It was the ability to teach myself how to use & create technology that formed my path in life. Hence, I earned a Masters Degree from DeVry in Management Information Systems and  began working in the IT field for a Network Consultant for two years. From there I created my own business repairing smartphone and tablet screens in coordination with a company based in CA, iCracked. Now I am on my journey through Dev Bootcamp to become a Software Engineer and fulfill my desire to create and build efficient and readable software programs to better humanity. 
-			</p>
-			<div class="glance-life">
-				<img class="pic" src="imgs/IMG_1252.jpg" alt="IG Desktop">
-				<img class="pic" src="imgs/IMG_1251.jpg" alt="IG Desktop">
-				<img class="pic" src="imgs/IMG_1250.jpg" alt="IG Desktop">
-				<img class="pic" src="imgs/IMG_1241.jpg" alt="IG Desktop">
-				<img class="pic" src="imgs/IMG_1131.jpg" alt="IG Desktop">
-				<img class="pic" src="imgs/IMG_1180.jpg" alt="IG Desktop">
+	</div>
+</nav>
+
+
+<!-- Main (Home) section -->
+<section class="section" id="head">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
+
+				<!-- Site Title, your name, HELLO msg, etc. -->
+				<h1 class="title">FJ Collins Jr.</h1>
+				<h2 class="subtitle">Full-Stack Developer</h2>
+
+				<!-- Short introductory (optional) -->
+				<h3 class="tagline">
+					Place holder for my one liner...
+				</h3>
+
+				<!-- Nice place to describe your site in a sentence or two -->
+				<!-- <p><a href="/download/" class="btn btn-default btn-lg">Download template now</a></p> -->
+
+			</div> <!-- /col -->
+		</div> <!-- /row -->
+
+	</div>
+</section>
+
+<!-- Second (About) section -->
+<section class="section" id="about">
+	<div class="container">
+
+		<h2 class="text-center title">About me</h2>
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-2">
+				<h5><strong>Back Story<br></strong></h5>
+				<p>Growing up, I wasn't one of those kids who knew exactly what he wanted to be (i.e. Astronaut, Police Office, Cowboy etc.), instead I focused on what I love doing which was playing football. I played football most of my life and when I realized I could not play forever, I was stuck with what to do with my career. It wasn't until I built my first computer from scratch that I knew working with computers was where I belong. It was the ability to teach myself how to use & create technology that formed my path in life. Hence, I earned a Masters Degree from DeVry in Management Information Systems and began working in the IT field for a Network Consultant for two years.</p>
 			</div>
-		</section>
-		<div class="br"></div>
-	<section class="column-1">
-		<h2 class="headers">Projects</h2>
-			<img id="project" src="imgs/Git-terminal.png" alt="Git-terminal" height="100" width="100">
-			<a id="blog" href="projects/index.html">View More Projects!</a>
-	</section>
-	<section class="column-2">
-		<h2 class="headers">Writing</h2>
-			<a id="blog2" href="blog/git.html">What is Git & Why Should You Use It?</a>
-			<p>FJ Collins Jr. - December 31, 2015</p>
-			<p>In order to understand that benefits of Git, one must understand exactly what is version control.</p>
-			<a id="blog4" href="blog/css-concepts.html">Class vs. ID - Battle Between CSS Concepts!</a>
-			<p>FJ Collins Jr. - January 17, 2016</p>
-			<p>There is often a question of "when do I use classes vs. IDs when styling an HTML doc?"</p>
-			<a id="blog3" href="blog-index.html">View More Posts!</a>
-	</section>
-	<footer>
-		<p>Connect with me:</p>
-			<div>
-				<a class="footer" href="https://github.com/FJunior225"><img src="imgs/Octocat.png" alt="GitHub Octocat" width="20" height="20"></a>
-				<a class="footer" href="http://www.linkedin.com/profile/view?id=AAIAAAL5ApoBloZ_nNmCpK1EoIrAJvxYkEEwGMA&trk=nav_responsive_tab_profile"><img src="imgs/linkedin-logo.jpg" width="20" height="20" alt="LinkedIn Logo"></a>
-				<a class="footer" href="mailto:fcollins225@gmail.com"><img src="imgs/email.png" width="20" height="20" alt="Envelope Logo"></a>
+			<div class="col-sm-4">
+				<h5><strong>Continued...<br></strong></h5>
+				<p>From there I created my own business repairing smartphone and tablet screens in coordination with a company based in CA, iCracked. I have recently completed my journey through Dev Bootcamp, a 19-week intensive training program for aspiring web-developers, specializing in Ruby, Rails, HTML5, CSS, Test Driven Development, Object-Oriented Javascript, (AJAX, JQuery), Git and Source Control, Heroku and Agile Development. This program has turned me into a Full-Stack Web Developer. I now plan to fulfill my desire to create beautiful and meaningful things.</p>
 			</div>
-		<p>
-       	Copyright &copy; 2015 FJ Collins Jr. All Rights Reserved.
-    	</p>
-	</footer>
+		</div>
+	</div>
+</section>
+
+<!-- Third (Works) section -->
+<section class="section" id="themes">
+	<div class="container">
+
+		<h2 class="text-center title">Portfolio</h2>
+		<p class="lead text-center">
+		</p>
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-2">
+				<div class="thumbnail">
+					<img src="assets/screenshots/next-best-friend.png" alt="">
+					<div class="caption">
+						<h3>Next Best Friend</h3>
+						<p>Mobile iOS App that enables users to swipe through adoptable pets from local shelters.</p>
+						<p><a href="#" class="btn btn-default" role="button">Watch Demo!</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="thumbnail">
+					<img src="assets/screenshots/tunnel.jpg" alt="">
+					<div class="caption">
+						<h3>LookieLoo</h3>
+						<p>A web app that allows the user to see all public toilets within their location, review public toilets, as well as add toilets that are not currently in our database.</p>
+						<p><a href="#" class="btn btn-default" role="button">Visit Site!</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4 col-sm-offset-2">
+				<div class="thumbnail">
+					<img src="assets/screenshots/sshot5.jpg" alt="">
+					<div class="caption">
+						<h3>The Great Outdoors</h3>
+						<p>Coming Soon</p>
+						<p><a href="#" class="btn btn-default" role="button">Button</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="thumbnail">
+					<img src="assets/screenshots/sshot3.jpg" alt="">
+					<div class="caption">
+						<h3>self.diary</h3>
+						<p>Coming Soon!</p>
+						<p><a href="#" class="btn btn-default" role="button">Button</a></p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</section>
+
+<!-- Fourth (Resume) section -->
+<section class="section" id="resume">
+	<div class="container">
+
+		<h2 class="text-center title">Resume</h2>
+		<div class="row">
+			<div class="col-lg-3 col-lg-offset-4">
+				<h2 class="subtitle">.PDF</h2>
+				<a href="fj_collins.pdf" class="btn btn-link"><i class="fa fa-4x fa-file"></i> </a>
+			</div>
+			<div class="col-lg-3">
+				<h2 class="subtitle">WEB</h2>
+				<a href="resume.html" class="btn btn-link resume-link"><i class="fa fa-4x fa-file-text"></i> </a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-lg-offset-2 resume">
+				<iframe src="https://resume.creddle.io/embed/3k3089da2h" width="850" height="1100" seamless></iframe>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Fifth (Contact) section -->
+<section class="section" id="contact">
+	<div class="container">
+
+		<h2 class="text-center title">Get in touch</h2>
+
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 text-center">
+				<p class="lead">Have a question about who I am, or what I've done?</p>
+				<p>Feel free to email me, view my repos on Github or my LinkedIn profile.</p>
+				<p><br><br></p>
+				<ul class="list-inline list-social">
+					<li><a href="mailto:fcollins225@gmail.com" class="btn btn-link"><i class="fa fa-envelope fa-fw"></i> Email</a></li>
+					<li><a href="https://github.com/FJunior225" class="btn btn-link"><i class="fa fa-github fa-fw"></i> Github</a></li>
+					<li><a href="http://linkedin.com/in/fjcollinsjr" class="btn btn-link"><i class="fa fa-linkedin fa-fw"></i> LinkedIn</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+
+<!-- Load js libs only when the page is loaded. -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="assets/js/modernizr.custom.72241.js"></script>
+<!-- Custom template scripts -->
+<script src="assets/js/magister.js"></script>
 </body>
 </html>
